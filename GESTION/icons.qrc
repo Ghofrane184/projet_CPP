@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/icons.qrc</file>
+        <file>icons/wepik-photo-mode-2022923-115059.png</file>
+    </qresource>
+</RCC>
