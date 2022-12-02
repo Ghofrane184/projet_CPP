@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons8-ajouter-64.png</file>
+        <file>icons8-ajouter-aux-favoris-64.png</file>
+        <file>icons8-carnet-d'adresses-64.png</file>
+        <file>icons8-effacer-64 (1).png</file>
+        <file>icons8-effacer-64.png</file>
+        <file>icons8-engrenage-64.png</file>
+        <file>icons8-entrer-64.png</file>
+        <file>icons8-four-squares-64.png</file>
+        <file>icons8-menu-carré-64.png</file>
+        <file>icons8-mises-à-jour-disponibles-64.png</file>
+        <file>icons8-page-d’accueil-64.png</file>
+        <file>icons8-téléchargement-des-mises-à-jour-64.png</file>
+        <file>wepik-photo-mode-2022923-115059.png</file>
+        <file>312122084_509937820721131_8023891078370197144_n.png</file>
+        <file>312429297_445290024180468_1769385482268134196_n.png</file>
+        <file>312551831_410074381158418_5360117734813686178_n - Copie - Copie.png</file>
+    </qresource>
+</RCC>
