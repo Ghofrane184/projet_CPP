@@ -1,0 +1,29 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons.qrc</file>
+        <file>icons8-ajouter-64.png</file>
+        <file>icons8-ajouter-aux-favoris-64.png</file>
+        <file>icons8-carnet-d'adresses-64.png</file>
+        <file>icons8-effacer-64 (1).png</file>
+        <file>icons8-effacer-64.png</file>
+        <file>icons8-engrenage-64.png</file>
+        <file>icons8-entrer-64.png</file>
+        <file>icons8-four-squares-64.png</file>
+        <file>icons8-menu-carré-64.png</file>
+        <file>icons8-mises-à-jour-disponibles-64.png</file>
+        <file>icons8-page-d’accueil-64.png</file>
+        <file>icons8-téléchargement-des-mises-à-jour-64.png</file>
+        <file>../../../../../Downloads/utilisateur.png</file>
+        <file>../../../../../Downloads/recherche-sociale.png</file>
+        <file>../../../../../Downloads/question.png</file>
+        <file>../../../../../Downloads/pdf.png</file>
+        <file>../../../../../Downloads/le-curseur.png</file>
+        <file>../../../../../Downloads/idee.png</file>
+        <file>../../../../../Downloads/graphique-en-ligne.png</file>
+        <file>../../../../../Downloads/e-mail.png</file>
+        <file>../../../../../Downloads/dollar.png</file>
+        <file>../../../../../Downloads/chercher.png</file>
+        <file>../../../../../Downloads/cadenas.png</file>
+        <file>wepik-photo-mode-2022923-115059.png</file>
+    </qresource>
+</RCC>
