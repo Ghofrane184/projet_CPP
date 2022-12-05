@@ -10,15 +10,17 @@ class Event
 {
 public:
     Event();
-    Event(QString,QString,QString,QString);
+    Event(QString,QString,QString,QString,int);
     QString getID_event();
     QString getDates();
     QString gettype();
     QString getnom_event();
+     int getcin();
    void setID_event(QString);
    void setDates(QString);
    void settype(QString);
    void setnom_event(QString);
+   void setcin(int);
    bool ajouter();
    void setParticipantNumber(int);
    int getParticipantNumber();
@@ -52,6 +54,7 @@ public:
 QString Dates;
  QString type,nom_event;
  int participantNumber;
+ int cin;
 
 
 
