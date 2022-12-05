@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainwindow2</class>
+ <widget class="QDialog" name="mainwindow2">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1166</width>
+    <height>680</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>80</y>
+     <width>591</width>
+     <height>601</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">*{
+font-family:century gothic;
+font-size:24px;
+}
+
+QFrame{
+background:#01166B;
+}
+QPushButton{
+border-radius:60px;
+background:#01166B;
+}
+
+QToolButton{
+border-radius:60px;
+background:#01166B;
+}
+QLabel{
+color:white;}
+
+QPushButton{
+color:white;
+border-radius:15px;
+background:#9708B4;
+}
+QPushButton:hover{
+color:#78B5F1;
+border-radius:15px;
+background:#0381F9;
+}
+</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>330</y>
+      <width>321</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Gestion des evennements</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_6">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>420</y>
+      <width>321</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Gestion des salles</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_5">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>520</y>
+      <width>321</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Gestion des reservations</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>150</y>
+      <width>321</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Gestion des Clients</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>240</y>
+      <width>321</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Gestion des personnels</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>100</y>
+      <width>181</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>WELCOME!</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QToolButton" name="toolButton">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>10</y>
+     <width>251</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">*{
+font-family:century gothic;
+font-size:24px;
+}
+
+QFrame{
+background:#01166B;
+}
+QPushButton{
+border-radius:60px;
+background:#01166B;
+}
+
+QToolButton{
+border-radius:60px;
+background:#01166B;
+}
+QLabel{
+color:white;}
+
+QPushButton{
+color:white;
+border-radius:15px;
+background:#9708B4;
+}
+QPushButton:hover{
+color:#78B5F1;
+border-radius:15px;
+background:#0381F9;
+}
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/LOGO DES.png</normaloff>:/icons/LOGO DES.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>200</width>
+     <height>120</height>
+    </size>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>

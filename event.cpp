@@ -20,20 +20,24 @@ nom_event=" ";
 Dates=" ";
 type=" ";
 participantNumber = 0;
+cin =0;
 }
 
-Event::Event(QString ID_event,QString Dates,QString type,QString nom_event){
+Event::Event(QString ID_event,QString Dates,QString type,QString nom_event,int cin){
 this->ID_event=ID_event;
 this->Dates=Dates;
 this->type=type;
 this->nom_event=nom_event;
 this->participantNumber = 0;
+this->cin=cin;
    // ID_event=id;
 }
 
 QString Event::getID_event(){
     return ID_event;
 }
+int Event:: getcin(){return cin;}
+
 QString Event::getDates(){
     return Dates;
 }
@@ -46,6 +50,8 @@ QString Event::getnom_event(){
 void Event::setID_event(QString ID_event){
     this->ID_event=ID_event;
 }
+void Event::setcin(int cin){this->cin=cin;}
+
 void Event::setDates(QString Dates){
     this->Dates=Dates;
 }
@@ -67,11 +73,12 @@ bool Event::ajouter(){
     QSqlQuery query;
 
 
-         query.prepare("INSERT INTO GESTION_EVENT (ID_event, nom_event, type, Dates ) "
-                       "VALUES (:ID_event, :nom_event, :type, :Dates)");
+         query.prepare("INSERT INTO GESTION_EVENT (ID_event, nom_event, type, Dates, CIN) "
+                       "VALUES (:ID_event, :nom_event, :type, :Dates, :CIN)");
           query.bindValue(":ID_event",ID_event)  ;
          query.bindValue(":Dates", Dates);
          query.bindValue(":type", type);
+         query.bindValue(":CIN", cin);
          query.bindValue(":nom_event", nom_event);
          query.bindValue(":nbr",0);
       return query.exec();
@@ -97,9 +104,11 @@ QSqlQueryModel* Event::afficher(){
 
 
        model->setQuery("SELECT * FROM GESTION_EVENT");
+
            model->setHeaderData(0, Qt::Horizontal,QObject::tr("ID_EVENT"));
        model->setHeaderData(0, Qt::Horizontal,QObject::tr("NOM_EVENT"));
        model->setHeaderData(1, Qt::Horizontal,QObject::tr("TYPE"));
+
        model->setHeaderData(2, Qt::Horizontal,QObject::tr("DATES"));
 
 
@@ -243,7 +252,7 @@ bool Event::retirer(int ko){
 QSqlQueryModel* model=new QSqlQueryModel();
 
 QSqlQuery query;
-query.prepare("SELECT CAPACITY FROM GESTION_SALLES");
+query.prepare("SELECT CAPACITY FROM SALLE");
  ko = query.value(0).toInt();
  qInfo() << "============================";
 qInfo() << ko;
@@ -302,7 +311,7 @@ bool Event::updatenbr(QString pizza)
 
         query1.prepare("SELECT NBR FROM GESTION_EVENT WHERE NOM_EVENT LIKE '"+pizza+"'");
         query1.bindValue(":name",pizza);
-        query3.exec("SELECT  GESTION_SALLES.CAPACITY FROM GESTION_SALLES , GESTION_EVENT WHERE GESTION_SALLES.ID_SALLES = GESTION_EVENT.ID_SALLES AND GESTION_EVENT.NOM_EVENT='"+pizza+"'");
+        query3.exec("SELECT SALLE.CAPACITY FROM SALLE , GESTION_EVENT WHERE SALLE.ID_SALLE = GESTION_EVENT.ID_SALLE AND GESTION_EVENT.NOM_EVENT='"+pizza+"'");
 
         if(!query1.exec() && !query3.exec()){
             qDebug() << query1.lastError() << "error query1" << query3.lastError() << "error query3";

@@ -1,6 +1,12 @@
 QT       += core gui serialport
 QT += printsupport
 QT       += core gui charts
+QT += network
+QT       += widgets
+QT      += multimedia
+QT       += core gui network printsupport \
+
+
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = DateManager
@@ -24,21 +30,48 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     arduino.cpp \
+    arduino1.cpp \
+    authentification.cpp \
+    client.cpp \
     conx.cpp \
     event.cpp \
+    gestion_salle.cpp \
+    login.cpp \
     main.cpp \
     mainwindow.cpp \
-    popup.cpp
+    mainwindow2.cpp \
+    mainwindow3.cpp \
+    mainwindow4.cpp \
+    personnels.cpp \
+    popup.cpp \
+    salle.cpp \
+    smtp.cpp
 
 HEADERS += \
     arduino.h \
+    arduino1.h \
+    authentification.h \
+    client.h \
     conx.h \
     event.h \
+    gestion_salle.h \
+    login.h \
     mainwindow.h \
-    popup.h
+    mainwindow2.h \
+    mainwindow3.h \
+    mainwindow4.h \
+    personnels.h \
+    popup.h \
+    salle.h \
+    smtp.h
 
 FORMS += \
-    mainwindow.ui
+    gestion_salle.ui \
+    login.ui \
+    mainwindow.ui \
+    mainwindow2.ui \
+    mainwindow3.ui \
+    mainwindow4.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

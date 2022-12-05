@@ -38,6 +38,7 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
     popUp = new PopUp();
 
 
@@ -79,9 +80,10 @@ void MainWindow::on_PB_ajout_clicked()
     QString Dates=ui->l_dates->text();
     QString type=ui->l_eventype->text();
 QString nom_event =ui->l_eventname->text();
+int cin=ui->l_CIN->text().toInt();
 QString ID_event= ui->l_idevent->text();
 
-Event E(ID_event,Dates,type,nom_event);
+Event E(ID_event,Dates,type,nom_event,cin);
 
 bool test= E.ajouter();
 if (test){
@@ -349,7 +351,7 @@ void MainWindow::on_PB_loadevent_clicked()
 
 void MainWindow::on_PB_inscri_clicked()
 {
- QString text = ui->lc_event->currentText();
+ /*QString text = ui->lc_event->currentText();
  Event E3;
 int kj;
 
@@ -365,10 +367,12 @@ if(!arduint_access_rfid){
                 QObject::tr("Wrong Magnetic card.\n"
                             "Click Cancel to exit."), QMessageBox::Cancel);
      ui->tab_event->setModel(E.afficher());
-}
-if (result && arduint_access_rfid ){
+}*/
+/*if (result && arduint_access_rfid ){
     popUp->setPopupText("Magnetic card ok");
     popUp->show();
+if (result){
+
      QMessageBox::information(nullptr, QObject::tr(" OK"),
                  QObject::tr("inscription successful.\n"
                              "Click Cancel to exit."), QMessageBox::Cancel);
@@ -379,7 +383,7 @@ if (result && arduint_access_rfid ){
  {QMessageBox::critical(nullptr, QObject::tr("NOT OK"),
                  QObject::tr("inscription failed.\n"
                              "Click Cancel to exit."), QMessageBox::Cancel);}
-qDebug() << result << "update result";
+qDebug() << result << "update result";*/
 
 }
 
@@ -454,7 +458,7 @@ void MainWindow::on_PB_stat__nbr_t_clicked()
     }
 
 }
-void MainWindow::update_label()
+/*void MainWindow::update_label()
 {
     QString text = ui->lc_event->currentText();
     Event E3;
@@ -475,11 +479,11 @@ void MainWindow::update_label()
    }
    if (result && arduint_access_rfid ){
        popUp->setPopupText("Magnetic card ok");
-       popUp->show();
+       popUp->show();*/
        /* QMessageBox::information(nullptr, QObject::tr(" OK"),
                     QObject::tr("inscription successful.\n"
                                 "Click Cancel to exit."), QMessageBox::Cancel);*/
-         ui->tab_event->setModel(E.afficher());
+         /*ui->tab_event->setModel(E.afficher());
 
     }
     else
@@ -488,4 +492,4 @@ void MainWindow::update_label()
                                 "Click Cancel to exit."), QMessageBox::Cancel);}
    qDebug() << result << "update result";
 
-}
+}*/

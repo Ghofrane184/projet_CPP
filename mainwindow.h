@@ -3,10 +3,10 @@
 #include <QMainWindow>
 #include "event.h"
 #include "popup.h"
- #include "arduino.h";
-QT_BEGIN_NAMESPACE
+#include "arduino.h"
+//QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
-QT_END_NAMESPACE
+//QT_END_NAMESPACE
 
 class MainWindow : public QMainWindow
 {
